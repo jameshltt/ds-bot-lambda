@@ -1,13 +1,14 @@
 require('dotenv').config()
 const axios = require('axios').default;
 
-let url = `https://discord.com/api/v8/applications/${process.env.APP_ID}/commands`
+let url = `https://discord.com/api/v8/applications/${process.env.APP_ID}/commands` //url to register global command
 
+//required headers for the discord post request
 const headers = {
     "Authorization": `Bot ${process.env.BOT_TOKEN}`,
     "Content-Type": "application/json"
 }
-
+//data to register a new command
 let command_data = {
     "name": "ask",
     "type": 1,
@@ -15,17 +16,12 @@ let command_data = {
     "options":[{
         "name": "question",
         "description": "question to ask",
-        "type":3,
+        "type":3, //specify text input to be received from user
         "required": true
     }]
 }
 
-// let command_data = {
-//     "name": "askMe",
-//     "type": 3,
-//     "description": "ask me a question",
-// }
-
+//post request to register the command
 try{
     axios.post(url, JSON.stringify(command_data), {
         headers: headers,
