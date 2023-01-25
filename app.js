@@ -56,7 +56,7 @@ exports.handler = async (event) => {
             Payload: JSON.stringify(event),
             InvocationType: 'Event',
         }).promise();
-        if (lambdaPromise) {
+        if (await Promise.all([lambdaPromise])) {
             console.log('Returning temporary response...');
             return {
                 'statusCode':200,
