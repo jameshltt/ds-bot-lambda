@@ -1,0 +1,4 @@
+/.env
+/register_commands/.env
+/node_modules/
+/.aws-sam/
