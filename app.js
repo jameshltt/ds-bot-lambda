@@ -50,7 +50,7 @@ exports.handler = async (event) => {
     if(body.data.name === 'ask'){
         //invoke 2nd Lambda with the event received from client
         const lambdaPromise = lambda.invoke({
-            FunctionName: 'arn:aws:lambda:af-south-1:982915021976:function:ds-bot-lambda2',
+            FunctionName: process.env.FUNCTION_ARN,
             Payload: JSON.stringify(event),
             InvocationType: 'Event',
         }).promise();
