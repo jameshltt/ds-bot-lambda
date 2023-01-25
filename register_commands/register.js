@@ -35,36 +35,4 @@ try{
 }
 
 
-// let command_data = {
-//     "name": "foo",
-//     "type": 1,
-//     "description": "replies with bar",
-//     "options": [
-//         {
-//             "name": "foo",
-//             "description": "The type of animal",
-//             "type": 3,
-//             "required": True,
-//             "choices": [
-//                 {
-//                     "name": "Dog",
-//                     "value": "animal_dog"
-//                 },
-//                 {
-//                     "name": "Cat",
-//                     "value": "animal_cat"
-//                 },
-//                 {
-//                     "name": "Penguin",
-//                     "value": "animal_penguin"
-//                 }
-//             ]
-//         },
-//         {
-//             "name": "only_smol",
-//             "description": "Whether to show only baby animals",
-//             "type": 5,
-//             "required": False
-//         }
-//     ]
-// }
+
