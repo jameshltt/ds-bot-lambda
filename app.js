@@ -59,7 +59,13 @@ exports.handler = async (event) => {
         if (lambdaPromise) {
             console.log('Returning temporary response...');
             return {
-                type: 5,
+                'statusCode':200,
+                'body': JSON.stringify({
+                    'type':5,
+                    'data': {
+                        'content': 'Loading...',
+                    }
+                })
             };
         }
     }
